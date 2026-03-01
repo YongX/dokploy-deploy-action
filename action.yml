@@ -24,7 +24,7 @@ runs:
         DOKPLOY_APPLICATION_ID: ${{ inputs.application_id }}
       run: |
         response=$(curl -X 'POST' \
-          "$DOKPLOY_URL/api/application/deploy" \
+          "$DOKPLOY_URL/api/application.deploy" \
           -H 'accept: application/json' \
           -H 'Content-Type: application/json' \
           -H "X-API-KEY: $DOKPLOY_AUTH_TOKEN" \
